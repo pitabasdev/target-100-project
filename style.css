@@ -1,0 +1,21 @@
+.container {
+	cursor: pointer;
+    display: inline-block;
+}
+.bar1,
+.bar2, .bar3 {
+	height: 5px;
+	background-color: black;
+	width: 35px;
+    margin: 5px;
+    transition: 0.4s;
+}
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
