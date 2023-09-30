@@ -1,0 +1,17 @@
+.accordion{
+    width: 100%;
+    padding: 18px;
+    background-color: #eee;
+    outline: none;
+    border: none;
+    transition: 0.4s;
+    font-size: 20px;
+    cursor: pointer;
+}
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
