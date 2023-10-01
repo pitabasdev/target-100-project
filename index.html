@@ -10,13 +10,32 @@
 
 <body>
     <div class="container">
-        <button class="tabBtn">Pitabas</button>
-        <button class="tabBtn">Anwesha</button>
-        <button class="tabBtn">Lipika</button>
-        <button class="tabBtn">Dipti</button>
-        <button class="tabBtn">Babu</button>
+        <button class="tabBtn" onclick="oprnFull(event,'Pitabas')">Pitabas</button>
+        <button class="tabBtn" onclick="oprnFull(event,'Anwesha')">Anwesha</button>
+        <button class="tabBtn" onclick="oprnFull(event,'Lipika')">Lipika</button>
+        <button class="tabBtn" onclick="oprnFull(event,'Dipti')">Dipti</button>
+        <button class="tabBtn" onclick="oprnFull(event,'Babu')">Babu</button>
     </div>
-
+    <div id="Pitabas" class="content">Pitabas Pradhasn</div>
+    <div id="Anwesha" class="content">Anwesha Mohanty</div>
+    <div id="Lipika" class="content">Lipika Pradhan</div>
+    <div id="Dipti" class="content">Dipti jena</div>
+    <div id="Babu" class="content">Babu Dash</div>
+    <script>
+        function oprnFull(evt, name) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tabBtn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(name).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 
 </html>
