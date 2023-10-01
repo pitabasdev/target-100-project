@@ -1,0 +1,14 @@
+.container{
+    width: 100%;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    background-color: aqua;
+}
+.container button{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 19px;
+    transition: 0.3s;
+}
