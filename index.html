@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Tabs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button class="TabBtn" onclick="openName(event,'PKD')">PKD</button>
+        <button class="TabBtn" onclick="openName(event,'BBSR')">BBSR</button>
+        <button class="TabBtn" onclick="openName(event,'GANJAM')">GANJAM</button>
+        <button class="TabBtn" onclick="openName(event,'ODISH')">ODISH</button>
+    </div>
+
+    <div id="PKD" class="content">
+        <h1>Paralakhemudi</h1>
+        <p>Centurion University Of technology</p>
+    </div>
+    <div id="BBSR" class="content">
+        <h1>Bhubaneswara</h1>
+        <p>Smart City</p>
+    </div>
+    <div id="GANJAM" class="content">
+        <h1>Ganjam Femous </h1>
+        <p>Danda Nacha</p>
+    </div>
+    <div id="ODISH" class="content">
+        <h1>ODISH</h1>
+
+    </div>
+    <script>
+        function openName(evt, Name) {
+            var i, content, TabBtn;
+            content = document.getElementsByClassName("content");
+            for (i = 0; i < content.length; i++) {
+                content[i].style.display = "none";
+            }
+            TabBtn = document.getElementsByClassName("TabBtn");
+            for (i = 0; i < TabBtn.length; i++) {
+                TabBtn[i].className = TabBtn[i].className.replace(" active", "");
+            }
+            document.getElementById(Name).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
