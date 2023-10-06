@@ -9,31 +9,49 @@
 </head>
 
 <body>
-    <div class="cutm">
+    <div class="cutm" id="BBSR">
         <h1>CUTM</h1>
         <p>Centurion University and management System</p>
         <p>BBSR</p>
     </div>
-    <div class="cutm">
+    <div class="cutm" id="PKD">
         <h1>CUTM</h1>
         <p>Centurion University and management System</p>
         <p>PKD</p>
     </div>
-    <div class="cutm">
+    <div class="cutm" id="Pitabas">
         <h1>Pitabas</h1>
         <p>Centurion University and management System</p>
         <p>CUTM</p>
     </div>
 
-    <button class="name">
+    <button class="name" id="defaultOpen" onclick="openName('BBSR', this, 'red')">
         BBSR
     </button>
-    <button class="name">
+    <button class="name" onclick="openName('PKD', this, 'red')">
         PKD
     </button>
-    <button class="name">
+    <button class="name" onclick="openName('Pitabas', this, 'red')">
         Pitabas
     </button>
+
+    <script>
+        function openName(cityName,elmnt,color) {
+          var i, cutm, name;
+          cutm = document.getElementsByClassName("cutm");
+          for (i = 0; i < cutm.length; i++) {
+            cutm[i].style.display = "none";
+          }
+          name = document.getElementsByClassName("name");
+          for (i = 0; i < name.length; i++) {
+            name[i].style.backgroundColor = "";
+          }
+          document.getElementById(openName).style.display = "block";
+          elmnt.style.backgroundColor = color;
+        
+        }
+        document.getElementById("defaultOpen").click();
+        </script>
 </body>
 
 </html>
